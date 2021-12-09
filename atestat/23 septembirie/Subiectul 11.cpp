@@ -10,13 +10,19 @@ char voc[] = "aeiou";
 
 void sub(char s[21], char t[21])
 {
-	for (int i = 0; i < strlen(s); ++i)
+	strcpy(t, "");
+	
+	int i;
+	
+	for (i = 0; i < strlen(s); ++i)
 	{
 		if (!strchr(voc, s[i]))
 			t[i] = s[i];
 		else
 			t[i] = '*';
 	}
+	
+	t[i]='\0';
 }
 
 int main()
